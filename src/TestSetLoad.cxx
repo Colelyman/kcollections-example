@@ -6,6 +6,10 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
+  if(argc < 3) {
+    std::cout << "Two arguments are required, kmer size and path to FASTA file." << std::endl;
+    return 1;
+  }
   int k = atoi(argv[1]);
   char* file_path = argv[2];
 
